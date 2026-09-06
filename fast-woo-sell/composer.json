@@ -1,0 +1,38 @@
+{
+	"name": "fast-woo-sell/fast-woo-sell",
+	"description": "Smart product recommendations, abandoned cart follow-up and stock forecasting for WooCommerce.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "3.10.2",
+		"wp-coding-standards/wpcs": "3.1.0",
+		"phpcompatibility/phpcompatibility-wp": "2.1.5",
+		"dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
+		"phpunit/phpunit": "9.6.20",
+		"yoast/phpunit-polyfills": "2.0.1"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"optimize-autoloader": true,
+		"sort-packages": true
+	},
+	"scripts": {
+		"lint": "phpcs --standard=phpcs.xml.dist",
+		"lint:legacy": "phpcs --standard=phpcs-legacy.xml.dist",
+		"lint:all": [
+			"@lint",
+			"@lint:legacy"
+		],
+		"fix": "phpcbf --standard=phpcs.xml.dist",
+		"test": "phpunit",
+		"check": [
+			"@lint:all",
+			"@test"
+		]
+	}
+}
