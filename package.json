@@ -1,0 +1,12 @@
+{
+	"name": "befrosh-fast-woocamers-sall",
+	"private": true,
+	"description": "Development tooling for the Fast Woo Sell WordPress plugin.",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"lint:php": "node tools/php-syntax-check.js"
+	},
+	"devDependencies": {
+		"php-parser": "3.7.0"
+	}
+}

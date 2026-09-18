@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+fast-woo-sell/vendor/
+
+# Build output
+fast-woo-sell/assets/build/
+dist/
+*.zip
+
+# Tooling caches
+.phpunit.result.cache
+.phpcs.cache
+composer.lock
+
+# Editors and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local overrides
+wp-config-local.php
+.env
